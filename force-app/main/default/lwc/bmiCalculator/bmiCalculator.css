@@ -1,0 +1,51 @@
+:host(){
+    --dark-blue:#0b0d21;
+    --light-white:#fafafa;
+    --light-blue:#4f7df9;
+    --light-pink:#e91e63;
+    --size-16:16px;
+    --size-14:14px;
+    --size-12:12px;
+    --dull-blue:#1d1e33;
+    --size-18:18px;
+    --size-14:14px;
+
+
+}
+.box{
+    color:var(--light-white);
+    max-width: 420px;
+    text-align: center;
+    margin: auto;
+    background-color: var(--dark-blue);
+    padding: var(--size-16);
+    border-radius: 38px;
+}
+h1{
+        font-weight: bold;
+        padding: 20px 0px;
+        font-size: 36px;
+}
+.infowrapper{
+        text-align: center;
+        background-color:var(--dull-blue);
+        padding: var(--size-16);
+        border-bottom-left-radius: var( --size-18);
+        border-bottom-right-radius: var( --size-18);
+        font-size: var(--size-14);
+}
+h2{
+    font-size: 26px;
+}
+.app{
+    min-height: 100vh;
+    background-image: url(/sfsites/c/resource/Vegies);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.slds-form-element__label{
+    color: var(--light-white);
+}
+.custom-button{
+    color:var(--light-pink);
+}

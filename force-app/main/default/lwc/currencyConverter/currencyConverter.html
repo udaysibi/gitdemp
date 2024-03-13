@@ -1,0 +1,49 @@
+<template>
+    <div class="app">
+        <div class="box">
+            <form>
+            <h1>Currency Converter</h1>
+        <div class="icon">
+            <img style="max-height: 200px" alt="Compnay logo" src={companyLogo} />
+        </div>
+        <div class="slds-form-element">
+            <label class="slds-form-element__label" for="text-input-id-47"></label>
+            <div class="slds-form-element__control">
+              <input type="number" id="text-input-id-1" placeholder="Amount" required="" class="slds-input" />
+            </div>
+          </div>
+          <div class="slds-grid slds-gutters">
+            <div class="slds-col">
+           <lightning-combobox
+              name="From"
+              label="From"
+              value={fromvalue}
+              variant="label-hidden"
+              placeholder="Currency"
+              options={countryList}
+              onchange={handleChange} >
+            </lightning-combobox>
+            </div>
+            <div class="slds-col">
+              <lightning-icon icon-name='action:change_record_type'
+               alternative-text='change_record_type' size='small' 
+               title='convert'>
+              </lightning-icon>
+            </div>
+            <div class="slds-col">
+            <lightning-combobox
+              name="To"
+              label="To"
+              variant="label-hidden"
+              value={Tovalue}
+              placeholder="Currency"
+              options={countryList}
+              onchange={handleChange} >
+            </lightning-combobox>
+            </div>
+            </div>
+      <button class="custom-button slds-button slds-button_neutral slds-button_stretch">Convert</button>
+        </form>
+    </div>
+    </div>
+</template>

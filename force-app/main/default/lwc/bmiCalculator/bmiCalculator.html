@@ -1,0 +1,37 @@
+<template>
+    <div class="app">
+        <div class="box">
+            <h1> BMI Calculator</h1>
+            <form onsubmit={submitHandler}>
+                <div class="slds-form-element slds-m-bottom_medium ">
+                    <label class="slds-form-element__label" for="text-input-id-47">
+                     Height(Cms)</label>
+                    <div class="slds-form-element__control">
+                      <input type="number" id="text-input-id-47" placeholder="Enter Height in cm(s)" min="0" required class="slds-input"  name="height" value={height} onchange={inputHandler}/>
+                    </div>
+                  </div>
+                  <div class="slds-form-element slds-m-bottom_medium">
+                    <label class="slds-form-element__label" for="text-input-id-47">
+                     Weight(kg)</label>
+                    <div class="slds-form-element__control">
+                      <input type="number" id="text-input-id-48" placeholder="Enter Weight in kg(s)"  min="0" required class="slds-input"  name="weight" value={weight} onchange={inputHandler} />
+                    </div>
+                  </div>
+                  <button class="slds-button slds-button_neutral slds-button_stretch slds-text-heading_medium">Calculate</button>
+            </form>
+            <h1> Your BMI : {result}</h1>
+            <div class="infowrapper">
+                <h2>What your BMI Means</h2>
+                <p class="slds-m-bottom_medium" >Once BMI is determined you can determine it</p>
+                <h2 class="slds-text-color_error slds-text-heading_medium"> Under 18.5</h2>
+                <p class="slds-m-bottom_medium" > You are very underweight and possibly malnourished</p>
+                <h2 class="slds-text-color_success slds-text-heading_medium"> Between 18.5 to 24.9</h2>
+                <p class="slds-m-bottom_medium " > You have a healthy weight range</p>
+                <h2  class="slds-text-color_error slds-text-heading_medium"> Between 25.0 to 29.9</h2>
+                <p class="slds-m-bottom_medium" > You are over weight</p>
+                <h2  class="slds-text-color_error slds-text-heading_medium"> Over 30 </h2>
+                <p class="slds-m-bottom_medium" > You are Obese</p>
+            </div>
+        </div>
+    </div>
+</template>
